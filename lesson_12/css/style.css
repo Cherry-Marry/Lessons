@@ -1,0 +1,334 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+body {
+    font-family: "Inter", sans-serif, "Proxima Nova Rg";
+    background: #f5f3f4;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+[class*="__container"] {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.header {
+    background: url(../img/background.jpg);
+    padding: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 5;
+}
+
+h1 {
+    color: rgb(224, 93, 41);
+    text-align: center;
+    font-size: 25px;
+}
+
+.main {
+    margin-bottom: 100px;
+}
+
+.main__container {
+    padding-bottom: 100px;
+}
+
+.practice {
+    text-align: center;
+    font-size: 0;
+    margin: 0 auto 150px;
+}
+
+.car-image {
+    position: relative;
+    padding-bottom: 400px;
+    margin-top: 300px;
+}
+
+.car-image__bg {
+    position: absolute;
+    top: -140px;
+    left: 0px;
+    right: 0px;
+    height: 400px;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(rgb(252, 117, 7) 5%, transparent 40%);
+    transition-duration: 1s;
+    animation-iteration-count: 10;
+}
+
+@keyframes colorbg {
+    0% {
+        transform: scale(1.5);
+        transition: 0.3s;
+        animation-timing-function: ease;
+    }
+
+    50% {
+        transition: 0.3s;
+        animation-timing-function: ease;
+    }
+
+    100% {
+        transform: scale(2);
+        transition: 0.3s;
+        background: linear-gradient(rgb(221, 43, 20) 5%, transparent 80%);
+        transition-timing-function: cubic-bezier(.1, .97, .56, 1.65);
+    }
+}
+
+.car-image__bg {
+    animation-name: colorbg;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.car-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 150px;
+    background: rgb(67, 67, 156);
+    margin: 0 auto;
+    border-radius: 80px;
+}
+
+.car-top__window {
+    position: absolute;
+    top: 7%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 150px;
+    background: rgb(52, 52, 61);
+    margin: 0 auto;
+    border-radius: 80px;
+}
+
+.car-bumper {
+    position: relative;
+    background: rgb(67, 67, 156);
+}
+
+.front {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+    height: 100px;
+    background: rgb(67, 67, 156);
+    margin: 0 auto;
+    border-radius: 80px;
+}
+
+.side {
+    display: inline-block;
+}
+
+.side__left {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgb(67, 67, 156);
+}
+
+.side__right {
+    position: absolute;
+    top: -50%;
+    right: 0;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgb(67, 67, 156);
+}
+
+.side__front {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 400px;
+    height: 50px;
+    background: rgb(52, 52, 61);
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.headlight__left {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    box-shadow: 0 0 20px 16px #f5f3f4;
+}
+
+@keyframes color {
+    0% {
+        background-color: antiquewhite;
+        box-shadow: 0 0 20px 16px #f5f3f4;
+    }
+
+    50% {
+        background-color: rgb(248, 103, 6);
+        box-shadow: 0 0 20px 16px #db3a25;
+    }
+
+    100% {
+        background-color: rgb(211, 24, 24);
+        box-shadow: 0 0 20px 16px #f70303;
+        transition: all 0.2s;
+
+    }
+}
+
+.headlight__left,
+.headlight__right {
+    animation-name: color;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    transition-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.headlight__brand {
+    display: inline-block;
+    margin: 5px 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(../img/volkswagen.png);
+}
+
+.headlight__right {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    box-shadow: 0 0 20px 16px #f5f3f4;
+}
+
+.front__bottom {
+    position: absolute;
+    top: 84%;
+    left: 5%;
+    width: 450px;
+    height: 17px;
+    background-color: #4c4e57;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+.wheels {
+    position: relative;
+}
+
+.wheels__left {
+    position: absolute;
+    top: 70px;
+    left: 7%;
+    width: 70px;
+    height: 90px;
+    background-color: black;
+    border-radius: 15px;
+    border-left: 5px dashed #333;
+    border-right: 5px dashed #333;
+    z-index: -1;
+}
+
+.wheels__right {
+    position: absolute;
+    top: 70px;
+    left: 80%;
+    width: 70px;
+    height: 90px;
+    background-color: black;
+    border-radius: 15px;
+    border-right: 5px dashed #333;
+    border-left: 5px dashed #333;
+    z-index: -1;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translateY(200px);
+    }
+}
+
+.car {
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 10;
+}
+
+.wheels__bottom {
+    position: absolute;
+    top: 96px;
+    left: 102px;
+    width: 303px;
+    height: 20px;
+    background-color: black;
+    border-radius: 30%;
+    box-shadow: 0 0 20px 16px #f5f3f4;
+    z-index: -2;
+}
+
+.road {
+    perspective: 100px;
+    perspective-origin: center;
+    z-index: -5;
+}
+
+.road__item {
+    position: absolute;
+    top: 334px;
+    left: 410px;
+    height: 200px;
+    width: 480px;
+    background: linear-gradient(0deg, black, transparent);
+    transform: rotateX(228deg);
+}
+
+.red {
+    transition-duration: 4s;
+    transition-property: background-color;
+}
